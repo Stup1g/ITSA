@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int m;
+    scanf("%d", &m);
+    
+    double time = m / 0.238;
+    
+    int result = (int)ceil(time);
+    
+    printf("%d\n", result);
+    
+    return 0;
+}
