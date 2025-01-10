@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int a, b, c, d, e, f, g;
+
+    scanf("%d %d", &a, &b);
+
+    c = a + b;
+    d = a * b;
+    e = a - b;
+    if (a < 0) {
+        f = a / b - 1;
+        g = a - f * b;
+    }else {
+        f = a / b;
+        g = a % b;
+    }
+    
+    printf("%d+%d=%d\n", a, b, c);
+    printf("%d*%d=%d\n", a, b, d);
+    printf("%d-%d=%d\n", a, b, e);
+    printf("%d/%d=%d...%d\n", a, b, f, g);
+
+	return 0;
+}
