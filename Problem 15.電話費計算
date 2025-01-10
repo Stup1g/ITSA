@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int min;
+    double bill;
+
+    scanf("%d", &min);
+
+    if (min <= 800) {
+        bill = min * 0.9;
+    }else if (min < 1500) {
+        bill = min * 0.81;
+    }else {
+        bill = min * 0.711;
+    }
+
+    printf("%.1f\n", bill);
+    
+	return 0;
+}
