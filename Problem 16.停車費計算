@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int start_hour, start_min, end_hour, end_min, park_min, bill;
+
+    scanf("%d %d", &start_hour, &start_min);
+    scanf("%d %d", &end_hour, &end_min);
+
+    if (end_min > start_min) {
+        park_min = (end_hour - start_hour) * 60 + (end_min - start_min);
+    }else {
+        park_min = (end_hour - start_hour - 1) * 60 + (end_min + 60 - start_min);
+    }
+
+    if (park_min <= 120) {
+        bill = park_min / 30 * 30;
+    }else if (park_min <= 240) {
+        bill = (park_min - 120) / 30 * 40 + 120;
+    }else {
+        bill = (park_min - 240) / 30 * 60 + 280;
+    }
+
+    printf("%d\n", bill);
+	return 0;
+}
