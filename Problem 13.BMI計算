@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int w, h;
+    double bmi, hmeters;
+
+    scanf("%d %d", &w, &h);
+
+    hmeters = h / 100.0;
+    bmi = w / (hmeters * hmeters);
+
+    printf("%.2f\n", bmi);
+	return 0;
+}
