@@ -1,21 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <iomanip>
+using namespace std;
 
 int main() {
     int t, s;
     double result;
 
-    scanf("%d %d", &t, &s);
+    cin >> t >> s;
 
     if (t <= 60) {
         result = t * s;
-    }else if (t <= 120) {
+    } else if (t <= 120) {
         result = (t - 60) * s * 1.33 + s * 60;
-    }else {
+    } else {
         result = (t - 120) * s * 1.66 + s * 60 * 2.33;
     }
 
-    printf("%.1f\n", result);
+    cout << fixed << setprecision(1) << result << endl;
 
-	return 0;
+    return 0;
 }
