@@ -1,15 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <iomanip>
+using namespace std;
 
 int main() {
     int w, h;
     double bmi, hmeters;
 
-    scanf("%d %d", &w, &h);
+    cin >> w >> h;
 
     hmeters = h / 100.0;
     bmi = w / (hmeters * hmeters);
 
-    printf("%.2f\n", bmi);
-	return 0;
+    cout << fixed << setprecision(2) << bmi << endl;
+    return 0;
 }
