@@ -1,18 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int n, a, b, c;
-
-    scanf("%d", &n);
+    cin >> n;
 
     a = n / 10;
     b = n % 10 / 5;
     c = n % 5;
-    
-    printf("NT10=%d\n", a);
-    printf("NT5=%d\n", b);
-    printf("NT1=%d\n", c);
-    
-	return 0;
+
+    cout << "NT10=" << a << endl;
+    cout << "NT5=" << b << endl;
+    cout << "NT1=" << c << endl;
+
+    return 0;
 }
