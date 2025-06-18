@@ -1,18 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int num;
 
-    scanf("%d", &num);
+    cin >> num;
 
     if (num > 0) {
-        printf("正數\n");
-    }else if (num == 0) {
-        printf("0\n");
-    }else {
-        printf("負數\n");
+        cout << "正數" << endl;
+    } else if (num == 0) {
+        cout << "0" << endl;
+    } else {
+        cout << "負數" << endl;
     }
 
-	return 0;
+    return 0;
 }
