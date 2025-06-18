@@ -1,4 +1,5 @@
-#include <iostream>  // 使用 cin/cout
+#include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -9,9 +10,7 @@ int main() {
 
     area = (base * height) / 2.0;
 
-    cout << "Triangle area:" << fixed;
-    cout.precision(1); // 設定小數點一位
-    cout << area << endl;
+    cout << "Triangle area:" << fixed << setprecision(1) << area << endl;
 
     return 0;
 }
