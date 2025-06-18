@@ -1,15 +1,16 @@
-#include <stdio.h>
-#include <math.h>
+#include <iostream>
+#include <cmath>
+using namespace std;
 
 int main() {
     int m;
-    scanf("%d", &m);
-    
+    cin >> m;
+
     double time = m / 0.238;
-    
+
     int result = (int)ceil(time);
-    
-    printf("%d\n", result);
-    
+
+    cout << result << endl;
+
     return 0;
 }
