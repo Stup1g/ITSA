@@ -1,17 +1,16 @@
-#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+using namespace std;
 
 int main() {
     int upper, lower, height;
     double area;
 
-    // 讀取底和高
-    scanf("%d %d %d", &upper, &lower, &height);
+    cin >> upper >> lower >> height;
 
-    // 計算三角形面積
     area = ((upper + lower) * height) / 2.0;
 
-    // 輸出結果
-    printf("Trapezoid area:%.1f\n", area);
+    cout << "Trapezoid area:" << fixed << setprecision(1) << area << endl;
 
     return 0;
 }
