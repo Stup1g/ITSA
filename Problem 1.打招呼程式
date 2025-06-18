@@ -1,11 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 int main() {
-    char a[50];
-
-    scanf("%s", a);
-
-    printf("Hello %s\n", a);
-	return 0;
+    string name;
+    cin >> name;
+    
+    cout << "Hello " << name << endl;
+    return 0;
 }
