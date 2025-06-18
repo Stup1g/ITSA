@@ -1,14 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <iomanip>
+using namespace std;
 
 int main() {
     int a;
     double b;
-    
-    scanf("%d", &a);
+
+    cin >> a;
 
     b = a * 1.6;
 
-    printf("km=%.1f\n", b);
-	return 0;
+    cout << "km=" << fixed << setprecision(1) << b << endl;
+
+    return 0;
 }
