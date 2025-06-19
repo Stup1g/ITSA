@@ -1,12 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int num;
-
-    scanf("%d", &num);
-
-    printf("%X\n", num);
-
+    cin >> num;
+    cout << hex << uppercase << num << endl;
     return 0;
 }
