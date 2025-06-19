@@ -1,14 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <iostream>
+#include <unordered_map>
+#include <string>
+using namespace std;
 
-typedef struct {
-    char english[10];
-    char chinese[10];
-} DictionaryEntry;
-
-void translate() {
-    DictionaryEntry dictionary[] = {
+int main() {
+    unordered_map<string, string> engToChi = {
         {"dog", "狗"},
         {"cat", "貓"},
         {"duck", "鴨"},
@@ -16,24 +12,19 @@ void translate() {
         {"fox", "狐"}
     };
 
-    int dictionary_size = sizeof(dictionary) / sizeof(dictionary[0]);
-
-    char input[10];
-    scanf("%s", input);
-
-    for (int i = 0; i < dictionary_size; i++) {
-        if (strcmp(input, dictionary[i].english) == 0) {
-            printf("%s\n", dictionary[i].chinese);
-            return;
-        }
-        if (strcmp(input, dictionary[i].chinese) == 0) {
-            printf("%s\n", dictionary[i].english);
-            return;
-        }
+    unordered_map<string, string> chiToEng;
+    for (auto& pair : engToChi) {
+        chiToEng[pair.second] = pair.first;
     }
-}
 
-int main() {
-    translate();
+    string input;
+    cin >> input;
+
+    if (engToChi.count(input)) {
+        cout << engToChi[input] << endl;
+    } else {
+        cout << chiToEng[input] << endl;
+    }
+
     return 0;
 }
