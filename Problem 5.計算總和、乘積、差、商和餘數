@@ -1,10 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int a, b, c, d, e, f, g;
 
-    scanf("%d %d", &a, &b);
+    cin >> a >> b;
 
     c = a + b;
     d = a * b;
@@ -12,15 +12,15 @@ int main() {
     if (a < 0) {
         f = a / b - 1;
         g = a - f * b;
-    }else {
+    } else {
         f = a / b;
         g = a % b;
     }
-    
-    printf("%d+%d=%d\n", a, b, c);
-    printf("%d*%d=%d\n", a, b, d);
-    printf("%d-%d=%d\n", a, b, e);
-    printf("%d/%d=%d...%d\n", a, b, f, g);
 
-	return 0;
+    cout << a << "+" << b << "=" << c << endl;
+    cout << a << "*" << b << "=" << d << endl;
+    cout << a << "-" << b << "=" << e << endl;
+    cout << a << "/" << b << "=" << f << "..." << g << endl;
+
+    return 0;
 }
